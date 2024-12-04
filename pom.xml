@@ -48,6 +48,15 @@
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.8.1</version> <!-- Ensure you're using a supported version of the compiler plugin -->
+      <configuration>
+        <source>17</source> <!-- Set source version to Java 17 -->
+        <target>17</target> <!-- Set target version to Java 17 -->
+      </configuration>
+    </plugin>
 <!--      <plugin>-->
 <!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.microsoft.azure/azure-functions-maven-plugin &ndash;&gt;-->
 <!--          <groupId>com.microsoft.azure</groupId>-->
