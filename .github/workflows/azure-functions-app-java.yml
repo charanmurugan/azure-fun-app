@@ -36,10 +36,8 @@ jobs:
 
 
       - name: Deploy to Azure Function App
-        uses: azure/functions-action@v1
-        with:
-          app-name: blob-trigger  # Replace with your Function App name
-          package: target/blob-trigger-function-1.0-SNAPSHOT.jar
+        run: |
+          az functionapp deploy --name blob-trigger --resource-group azure-func --src-path target/blob-trigger-function-1.0-SNAPSHOT.jar --type jar
           
 
       - name: Logout from Azure
