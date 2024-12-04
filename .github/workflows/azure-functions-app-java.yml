@@ -31,6 +31,9 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: List target directory
+        run: ls -al target/
+
 
       - name: Deploy to Azure Function App
         uses: azure/functions-action@v1
