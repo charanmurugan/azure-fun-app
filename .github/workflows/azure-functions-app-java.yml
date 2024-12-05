@@ -36,8 +36,10 @@ jobs:
 
 
       - name: Deploy to Azure Function App
-        run: |
-          az functionapp deploy --name blob-trigger-cnb --resource-group azure-func --src-path target/blob-trigger-function-1.0-SNAPSHOT.jar --type jar
+        uses: azure/functions-action@v1
+        with:
+           app-name: blob-trigger-cnb
+           package: '${{ github.workspace }}/target/*.jar
           
 
       - name: Logout from Azure
