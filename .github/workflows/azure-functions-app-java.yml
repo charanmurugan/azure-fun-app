@@ -38,8 +38,8 @@ jobs:
       - name: Deploy to Azure Function App
         uses: azure/functions-action@v1
         with:
-           app-name: blob-trigger-cnb
-           package: '${{ github.workspace }}/target/*.jar
+         app-name: blob-trigger-cnb
+         package: ${{ github.workspace }}/target/*.jar
           
 
       - name: Logout from Azure
