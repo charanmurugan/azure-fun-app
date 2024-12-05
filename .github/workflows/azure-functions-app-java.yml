@@ -39,7 +39,7 @@ jobs:
         uses: azure/functions-action@v1
         with:
          app-name: blob-trigger-cnb
-         package: blob-trigger-function-1.0-SNAPSHOT.jar
+         package: target/blob-trigger-function-1.0-SNAPSHOT.jar
           
 
       - name: Logout from Azure
